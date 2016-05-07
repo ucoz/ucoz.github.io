@@ -28,7 +28,7 @@ app.factory('Backend', ['$http',
             self.featured = data;
 
             $.ajax({
-                url: '/data/projects.json',
+                url: 'data/project.json',
                 dataType: 'jsonp',
                 jsonpCallback: 'JSON_CALLBACK',
                 success: function(data) {
