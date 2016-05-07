@@ -1,4 +1,15 @@
 ﻿[
+     {
+            "GithubOrg": "Primat",
+            "GithubRepo": "TypeScript",
+            "Url": "http://www.primat.org",
+            "Language": "JavaScript",
+            "License": {
+                  "Type": "Apache 2.0",
+                  "Url": "https://github.com/Microsoft/TypeScript/blob/master/LICENSE.txt"
+            },
+            "Contributor": "Microsoft"
+      },
       {
             "GithubOrg": "Microsoft",
             "GithubRepo": "TypeScript",
