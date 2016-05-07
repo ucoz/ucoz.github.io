@@ -28,7 +28,7 @@ app.factory('Backend', ['$http',
             self.featured = data;
             
             $.ajax({
-                url: 'http://ucoz.github.io/data/project.json',
+                url: 'https://popularrepostg.blob.core.windows.net/popularrepos/projects.json',
                 dataType: 'jsonp',
                 jsonpCallback: 'JSON_CALLBACK',
                 success: function(data) {
