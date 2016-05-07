@@ -27,7 +27,23 @@ app.factory('Backend', ['$http',
         Backend.featured().then(function(data) {
             self.featured = data;
 
-            $.ajax(
+            $.ajax({
+                url: 'https://popularrepostg.blob.core.windows.net/popularrepos/projects.json',
+                dataType: 'jsonp',
+                jsonpCallback: 'JSON_CALLBACK',
+                success: function(data) {
+                    var projects = data[0].AllProjects;
+                    $scope.currentPage = 1; //current page
+                    $scope.maxSize = 5; //pagination max size
+                    $scope.entryLimit = 3; //max rows for data table
+
+                    /* init pagination with $scope.list */
+                    $scope.noOfRepos = projects.length;
+                    $scope.noOfPages = Math.ceil($scope.noOfRepos / $scope.entryLimit);
+                    $scope.resultsSectionTitle = 'All Repos';
+                    $scope.pageChanged = function() {
+                        $anchorScroll();
+                    };
                     
                     $scope.$watch('searchText', function(term) {
                         // Create $scope.filtered and then calculate $scope.noOfPages, no racing!
