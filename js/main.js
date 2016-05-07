@@ -35,7 +35,7 @@ app.factory('Backend', ['$http',
                     var projects = data[0].AllProjects;
                     $scope.currentPage = 1; //current page
                     $scope.maxSize = 5; //pagination max size
-                    $scope.entryLimit = 36; //max rows for data table
+                    $scope.entryLimit = 3; //max rows for data table
 
                     /* init pagination with $scope.list */
                     $scope.noOfRepos = projects.length;
