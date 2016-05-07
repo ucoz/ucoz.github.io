@@ -64,7 +64,7 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Скрипт",
+            label: "Скрипты",
             value: 12
         }, {
             label: "Шаблоны",
