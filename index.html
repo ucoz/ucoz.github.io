@@ -82,6 +82,111 @@
 				<div class="main-content">
 					<div class="featured-projects">
 						<div class="loading" ng-hide="main.featuredProjects">Загрузка...</div>
+						
+<!---------------------->
+<div class="featured-projects">
+						<div class="loading ng-hide" ng-hide="main.featuredProjects" aria-hidden="[object Object],[object Object],[object Object]">Загрузка...</div>
+	
+						<!-- Carousel -->
+						<div id="carousel-featured-repos" class="slide carousel" ng-show="main.featuredProjects" data-ride="carousel" aria-hidden="false">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-featured-repos" data-slide-to="0" class=""></li>
+								<li data-target="#carousel-featured-repos" data-slide-to="1" class=""></li>
+								<li data-target="#carousel-featured-repos" data-slide-to="2" class=""></li>
+								<li data-target="#carousel-featured-repos" data-slide-to="3" class="active"></li>
+							</ol>
+							<!-- Slide -->
+							<div class="carousel-inner">
+								<!-- ngRepeat: project in main.featuredProjects --><div class="item ng-scope" ng-class="{'active': $index==0}" ng-repeat="project in main.featuredProjects">
+									<a ng-href="https://github.com/Microsoft/vscode" href="https://github.com/Microsoft/vscode">
+										<div class="panel panel-default clearfix center carousel-panel">
+											<div class="panel-heading">
+												<span class="panel-title ng-binding">vscode</span>
+											</div>
+										<div class="panel-body description ng-binding">Visual Studio Code</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-sm-8 col-sm-offset-4 col-xs-12 col-xs-offset-0 text-right">
+														<span class="span-stars-group ng-binding"><i class="fa fa-star fa-fw"></i>13956</span>
+														<span class="span-forks-group ng-binding"><i class="fa fa-code-fork fa-fw"></i>1788</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div><!-- end ngRepeat: project in main.featuredProjects --><div class="item ng-scope" ng-class="{'active': $index==0}" ng-repeat="project in main.featuredProjects">
+									<a ng-href="https://github.com/OfficeDev/Office-UI-Fabric" href="https://github.com/OfficeDev/Office-UI-Fabric">
+										<div class="panel panel-default clearfix center carousel-panel">
+											<div class="panel-heading">
+												<span class="panel-title ng-binding">Office-UI-Fabric</span>
+											</div>
+										<div class="panel-body description ng-binding">The front-end framework for building experiences for Office and Office 365.</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-sm-8 col-sm-offset-4 col-xs-12 col-xs-offset-0 text-right">
+														<span class="span-stars-group ng-binding"><i class="fa fa-star fa-fw"></i>2124</span>
+														<span class="span-forks-group ng-binding"><i class="fa fa-code-fork fa-fw"></i>276</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div><!-- end ngRepeat: project in main.featuredProjects --><div class="item ng-scope" ng-class="{'active': $index==0}" ng-repeat="project in main.featuredProjects">
+									<a ng-href="https://github.com/winjs/winjs" href="https://github.com/winjs/winjs">
+										<div class="panel panel-default clearfix center carousel-panel">
+											<div class="panel-heading">
+												<span class="panel-title ng-binding">winjs</span>
+											</div>
+										<div class="panel-body description ng-binding">A UI toolkit for modern browsers</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-sm-8 col-sm-offset-4 col-xs-12 col-xs-offset-0 text-right">
+														<span class="span-stars-group ng-binding"><i class="fa fa-star fa-fw"></i>3840</span>
+														<span class="span-forks-group ng-binding"><i class="fa fa-code-fork fa-fw"></i>472</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div><!-- end ngRepeat: project in main.featuredProjects -->
+								<!--Summary slide-->
+								<div class="item active">
+									<div class="panel panel-default clearfix center carousel-panel" style="height:273px;">
+										<div class="panel-heading">
+											<span class="panel-title">Overall</span>
+										</div>
+										<div class="panel-body description">
+											<div class="row ">
+												<div class="col-md-4 metric-value ng-binding">1604</div>
+												<div class="col-sm-2 metric-label">Repos</div>
+                                                						<div class="col-sm-2 metric-value ng-binding">203693</div>
+												<div class="col-md-4 metric-label"><i class="fa fa-star"></i>&nbsp;Stars</div>
+											</div>
+											<div class="row">
+                                                						<div class="col-md-4 metric-value ng-binding">235909</div>
+                                                						<div class="col-sm-2 metric-label"><i class="fa fa-code-fork"></i>&nbsp;Forks</div>
+												<div class="col-sm-2 metric-value ng-binding">24625</div>
+												<div class="col-md-4 metric-label">Open Issues</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-featured-repos" ng-non-bindable="" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							</a>
+							<a class="right carousel-control" href="#carousel-featured-repos" ng-non-bindable="" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+						</div>
+					</div>
+<!---------------------->
+						
+
+
+						
 	
 						<!-- Carousel -->
 						<div id="carousel-featured-repos" class="slide carousel" ng-show="main.featuredProjects" data-ride="carousel" ng-cloak>
