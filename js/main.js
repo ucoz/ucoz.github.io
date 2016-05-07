@@ -28,7 +28,7 @@ app.factory('Backend', ['$http',
             self.featured = data;
 
             $.ajax({
-                url: 'https://popularrepostg.blob.core.windows.net/popularrepos/projects.json',
+                url: '/data/projects.json',
                 dataType: 'jsonp',
                 jsonpCallback: 'JSON_CALLBACK',
                 success: function(data) {
