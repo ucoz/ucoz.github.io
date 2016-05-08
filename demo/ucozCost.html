@@ -1,1 +1,243 @@
-# Расчет стоимости сайта uCoz
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" > 
+	<title>Стоимость создания сайта на uCoz</title>        
+
+<style>
+ #customers
+ {
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ width:100%;
+ border-collapse:collapse;
+ }
+ #customers td, #customers th 
+ {
+ font-size:1em;
+ border:1px solid #98bf21;
+ padding:3px 7px 2px 7px;
+ }
+ #customers th 
+ {
+ font-size:1.1em;
+ text-align:left;
+ padding-top:5px;
+ padding-bottom:4px;
+ background-color:#A7C942;
+ color:#ffffff;
+ }
+ #customers tr.alt td 
+ {
+ color:#000000;
+ background-color:#EAF2D3;
+ }
+</style>
+	
+	
+<script type="text/javascript">
+  function calc() { 
+  var type_cms = document.getElementById("type_cms"); 
+  var type_design = document.getElementById("type_design"); 
+  var type_host = document.getElementById("type_host"); 
+  var soprovozhdenie = document.getElementById("soprovozhdenie");
+  var content = document.getElementById("content");
+  var seo = document.getElementById("seo");
+  var type_forum = document.getElementById("type_forum");
+  var comment = document.getElementById("comment");
+  var gallery = document.getElementById("gallery");
+  var eshop = document.getElementById("eshop");
+  var eshop_content = document.getElementById("eshop_content");
+ 
+ //Result
+  var result = document.getElementById("result_cms"); 
+  var result = document.getElementById("result_design");
+  var result = document.getElementById("soprovozhdenie");
+  var result = document.getElementById("content");
+  var result = document.getElementById("seo");
+  var result = document.getElementById("type_forum");
+  var result = document.getElementById("comment");
+  var result = document.getElementById("gallery");
+  var result = document.getElementById("eshop");
+  var result = document.getElementById("eshop_content");
+  var result = document.getElementById("result");
+  var price_cms = 0; 
+  var price_design = 0; 
+  var price_host = 0;
+  var price_soprovozhdenie = 0;
+  var price_content = 0;
+  var price_seo = 0;
+  var price_forum = 0;
+  var price_comment = 0;
+  var price_gallery = 0;
+  var price_eshop = 0;
+  var price_eshop_content = 0;
+  var price = 0; 
+  price_cms += parseInt(type_cms.options[type_cms.selectedIndex].value); 
+  price_design += parseInt(type_design.options[type_design.selectedIndex].value); 
+  price_host += (type_host.checked == true) ? parseInt(type_host.value) : 0;
+  price_soprovozhdenie += parseInt(soprovozhdenie.value)*1000;
+  price_content += parseInt(content.value)*500;
+  price_seo += (seo.checked == true) ? parseInt(seo.value) : 0;
+  price_forum += parseInt(type_forum.options[type_forum.selectedIndex].value); 
+  price_comment += (comment.checked == true) ? parseInt(comment.value) : 0;
+  price_gallery += (gallery.checked == true) ? parseInt(gallery.value) : 0;
+  price_eshop += (eshop.checked == true) ? parseInt(eshop.value) : 0;
+  price_eshop_content += (eshop_content.checked == true) ? parseInt(eshop_content.value) : 0;
+  price=price_cms + price_design + price_host + price_soprovozhdenie + price_content
+  + price_seo + price_forum + price_comment + price_gallery + price_eshop + price_eshop_content;
+ 
+  result_cms.innerHTML = price_cms; 
+  result_design.innerHTML = price_design;
+  result_host.innerHTML = price_host;
+  result_soprovozhdenie.innerHTML = price_soprovozhdenie;
+  result_content.innerHTML = price_content;
+  result_seo.innerHTML = price_seo;
+  result_forum.innerHTML = price_forum;
+  result_comment.innerHTML = price_comment;
+  result_gallery.innerHTML = price_gallery;
+  result_eshop.innerHTML = price_eshop;
+  result_eshop_content.innerHTML = price_eshop_content;
+  result.innerHTML = price;
+ } 
+</script>
+
+	</head>
+	<body>
+	 <table id="customers" style="margin-top:20px;" >
+ <tr>
+ <td width="150" style="vertical-align:middle;">Базовая комплектация сайта с системой управления UcoZ</td>
+ <td width="250" style="vertical-align:middle;">выберите базовую комплектацию</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_cms">
+ <option value="0" style="vertical-align:middle;">Выбрать комплектацию</option>
+ <option value="5000">Один модуль - новости</option>
+ <option value="6000">Новости + статьи</option>
+ <option value="7000">Новости+статьи+файлы</option>
+ <option value="8000">Четыре стандартных модуля</option>
+ <option value="9000">Больше четырех модулей</option>
+
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_cms">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 2design// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Дизайн вашего сайта</td>
+ <td width="250" style="vertical-align:middle;">выберите вариант дизайна</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_design">
+ <option value="0">Выбрать дизайн</option>
+ <option value="5000">Индивидуальный дизайн</option>
+ <option value="1000">Шаблонный дизайн ucoz</option>
+ <option value="550">Ваш готовый шаблон ucoz</option>
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_design">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 3hosting// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Домен + доменное имя сайта</td>
+ <td width="250" style="vertical-align:middle;">подбор доменного имени, регистрация на год и прикрепление к сайту</td>
+<td width="100" style="vertical-align:middle;">
+<input type="checkbox" onchange="calc()" value="1500" id="type_host" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_host">0</span> руб.</td>
+ </tr>
+ 
+<!--4soprovozhdenie//--> 
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Сопровождение сайта после запуска</td>
+ <td width="250" style="vertical-align:middle;">укажите число месяцев</td>
+<td width="100" style="vertical-align:middle;">
+<span><input style="width:50px;" type="text" id="soprovozhdenie" value="0" onchange="calc()" /></span></td>
+<td width="200" style="vertical-align:middle;"><span id="result_soprovozhdenie">0</span> руб.</td>
+ </tr>
+ 
+<!--5content//--> 
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Наполнение контентом: написание статей и размещение их на сайте</td>
+ <td width="250" style="vertical-align:middle;">укажите число статей (объем 1500-2500 символов)</td>
+<td width="100" style="vertical-align:middle;">
+<span><input style="width:50px;" type="text" id="content" value="0" onchange="calc()" /></span></td>
+<td width="200" style="vertical-align:middle;"><span id="result_content">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 6SEO// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Начальная поисковая оптимизация</td>
+ <td width="250" style="vertical-align:middle;">добавление в поисковые системы,
+ регистрация в каталогах, установка счетчиков</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="2000" id="seo" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_seo">0</span> руб.</td>
+ </tr>
+ 
+<!-- 7forum// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Установка и настройка форума на сайт</td>
+ <td width="250" style="vertical-align:middle;">до 30 разделов</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_forum">
+ <option value="0">Сайт без форума</option>
+ <option value="2500">Форум с дизайном сайта</option>
+ <option value="1000">Шаблонный форум UcoZ</option>
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_forum">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 8comment// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Установка модуля комментариев</td>
+ <td width="250" style="vertical-align:middle;">оценка, ответы, управление</td>
+<td width="100" style="vertical-align:middle;">
+<input type="checkbox" onchange="calc()" value="100" id="comment" /></td>
+<td width="200 style="vertical-align:middle;""><span id="result_comment">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 9gallery// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Установка, настройка и наполнение фотогалереи</td>
+ <td width="250" style="vertical-align:middle;">до 100 ваших изображений</td>
+<td width="100" style="vertical-align:middle;">
+<input type="checkbox" onchange="calc()" value="1000" id="gallery" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_gallery">0</span> руб.</td>
+ </tr>
+
+<!-- 10eshop// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Установка, настройка интернет-магазина</td>
+ <td width="250" style="vertical-align:middle;">используется модуль UcoZ</td>
+<td width="100" style="vertical-align:middle;">
+<input type="checkbox" onchange="calc()" value="5000" id="eshop" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_eshop">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 10eshop// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Наполнение интернет-магазина контентом</td>
+ <td width="250" style="vertical-align:middle;">до 100 товаров с вашим описанием товара</td>
+<td width="100" style="vertical-align:middle;">
+<input type="checkbox" onchange="calc()" value="5000" id="eshop_content" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_eshop_content">0</span> руб.</td>
+ </tr>
+ 
+<!-- Итог --> 
+ <tr>
+ <td width="250" class="td_result" style="vertical-align:middle;">ИТОГО:</td>
+ <td width="150" style="vertical-align:middle;"></td>
+<td width="100" style="vertical-align:middle;"></td>
+ <td class="td_result" style="vertical-align:middle;"><span id="result">0</span> руб.</td>
+ </tr>
+ </table>
+	
+ 
+  </body>
+</html>
