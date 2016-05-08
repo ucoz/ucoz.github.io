@@ -32,6 +32,38 @@
     
   
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<style type="text/css">
+.exm01 {color:#fff;background:#8353b4;padding:30px !Important}
+</style>
+
+<script type="text/javascript">
+$('.exm01').click(function() {
+ var e=this; 
+ if(window.getSelection){ 
+ var s=window.getSelection(); 
+ if(s.setBaseAndExtent){ 
+ s.setBaseAndExtent(e,0,e,e.innerText.length-1); 
+ }else{ 
+ var r=document.createRange(); 
+ r.selectNodeContents(e); 
+ s.removeAllRanges(); 
+ s.addRange(r);} 
+ }else if(document.getSelection){ 
+ var s=document.getSelection(); 
+ var r=document.createRange(); 
+ r.selectNodeContents(e); 
+ s.removeAllRanges(); 
+ s.addRange(r); 
+ }else if(document.selection){ 
+ var r=document.body.createTextRange(); 
+ r.moveToElementText(e); 
+ r.select();}
+});
+</script>
+
+
+
 </head>
 
 <body>
@@ -88,35 +120,7 @@
             
      <p class="exm01">Ну вот и наступила весна. Ласково пригревает солнышко. Тает снег. Поют птицы. Я узнала,что скоро прилетят птички с юга. Это интересно, что в середине весны птицы начинают строить гнёзда.На реке начнётся ледоход. Удивительно, что огромные глыбы льда трескаются и приходят в движение. Я люблю весну за первые цветочки, за первые листочки,за ласковое солнышко и приближение к долгожданному лету.</p>
             
-            <style type="text/css">
-.exm01 {color:#fff;background:#8353b4;padding:30px !Important}
-</style>
-
-<script type="text/javascript">
-$('.exm01').click(function() {
- var e=this; 
- if(window.getSelection){ 
- var s=window.getSelection(); 
- if(s.setBaseAndExtent){ 
- s.setBaseAndExtent(e,0,e,e.innerText.length-1); 
- }else{ 
- var r=document.createRange(); 
- r.selectNodeContents(e); 
- s.removeAllRanges(); 
- s.addRange(r);} 
- }else if(document.getSelection){ 
- var s=document.getSelection(); 
- var r=document.createRange(); 
- r.selectNodeContents(e); 
- s.removeAllRanges(); 
- s.addRange(r); 
- }else if(document.selection){ 
- var r=document.body.createTextRange(); 
- r.moveToElementText(e); 
- r.select();}
-});
-</script>
-
+            
 <p><code>div.example</code> замените на тот элемент, к которому нужно применить скрипт. Это может быть как ID, так и классы, так и название тегов. Чтобы применить ко всем параграфам, то используйте вместо указанного <code>p</code>, но скорее, это не потребуется.</p>
 <!--/Остальная часть текста-->
 
