@@ -1,0 +1,305 @@
+<script type="text/javascript">
+ 
+ function calc() { 
+ 
+ var type_cms = document.getElementById("type_cms"); 
+ 
+ var type_design = document.getElementById("type_design"); 
+
+ var type_index = document.getElementById("type_index"); 
+
+ var type_pgrank = document.getElementById("type_pgrank"); 
+ 
+ var type_host = document.getElementById("type_host"); 
+ 
+ 
+
+ 
+ var seo = document.getElementById("seo");
+ 
+ var type_forum = document.getElementById("type_forum");
+ 
+ var comment = document.getElementById("comment");
+ 
+ var gallery = document.getElementById("gallery");
+ 
+ var eshop = document.getElementById("eshop");
+ 
+ var eshop_content = document.getElementById("eshop_content");
+ 
+ //Result
+ var result = document.getElementById("result_cms"); 
+ 
+ var result = document.getElementById("result_design");
+
+ var result = document.getElementById("result_index");
+
+ var result = document.getElementById("result_pgrank");
+ 
+
+ 
+ var result = document.getElementById("seo");
+ 
+ var result = document.getElementById("type_forum");
+ 
+ var result = document.getElementById("comment");
+ 
+ var result = document.getElementById("gallery");
+ 
+ var result = document.getElementById("eshop");
+ 
+ var result = document.getElementById("eshop_content");
+ 
+ var result = document.getElementById("result");
+ 
+ var price_cms = 0; 
+ var price_design = 0; 
+
+ var price_index = 0; 
+
+ var price_pgrank = 0; 
+
+ var price_host = 0;
+
+
+ var price_seo = 0;
+ var price_forum = 0;
+ var price_comment = 0;
+ var price_gallery = 0;
+ var price_eshop = 0;
+ var price_eshop_content = 0;
+ var price = 180; 
+
+ price_cms += parseInt(type_cms.options[type_cms.selectedIndex].value); 
+
+ price_design += parseInt(type_design.options[type_design.selectedIndex].value); 
+
+ price_index += parseInt(type_index.options[type_index.selectedIndex].value); 
+
+ price_pgrank += parseInt(type_pgrank.options[type_pgrank.selectedIndex].value); 
+
+
+ price_host += (type_host.checked == true) ? parseInt(type_host.value) : 0;
+
+
+ price_seo += (seo.checked == true) ? parseInt(seo.value) : 0;
+ price_forum += parseInt(type_forum.options[type_forum.selectedIndex].value); 
+ price_comment += (comment.checked == true) ? parseInt(comment.value) : 0;
+ price_gallery += (gallery.checked == true) ? parseInt(gallery.value) : 0;
+ price_eshop += (eshop.checked == true) ? parseInt(eshop.value) : 0;
+ price_eshop_content += (eshop_content.checked == true) ? parseInt(eshop_content.value) : 0;
+ price=price_cms + price_design + price_host + price_seo + price_forum + price_comment + price_gallery + price_eshop + price_eshop_content+price_index+price_pgrank;
+ 
+
+
+ 
+ result_cms.innerHTML = price_cms; 
+ result_design.innerHTML = price_design;
+
+ result_index.innerHTML = price_index;
+
+ result_pgrank.innerHTML = price_pgrank;
+
+
+ result_host.innerHTML = price_host;
+
+ result_seo.innerHTML = price_seo;
+ result_forum.innerHTML = price_forum;
+ result_comment.innerHTML = price_comment;
+ result_gallery.innerHTML = price_gallery;
+ result_eshop.innerHTML = price_eshop;
+ result_eshop_content.innerHTML = price_eshop_content;
+ result.innerHTML = price;
+
+
+ } 
+</script>
+ 
+
+С помощью этого калькулятора можно сделать приблизительную оценку стоимости размещения ваших ссылок в зависимости от показателей сайтов. При расчете стоимости учитывается индекс цитирования, PageRank, расположение ссылки, тип ссылки и другие показатели, указанные в таблице.
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ <table id="customers" style="margin-top:20px;" >
+ <tr>
+ <td width="150" style="vertical-align:middle;">Тип вашей ссылки</td>
+ <td width="250" style="vertical-align:middle;">выберите тип ссылки</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_cms">
+ <option value="80">Контекстная ссылка</option>
+ <option value="70">Короткая заметка</option>
+ <option value="60">Ссылка - картинка</option>
+ <option value="50">Не индексируемая</option>
+ <option value="50">Без анкора - только url</option>
+
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_cms">80</span> руб.</td>
+ </tr>
+ 
+ <!-- 2design// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Расположение ссылки</td>
+ <td width="250" style="vertical-align:middle;">выберите вариант </td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_design">
+
+ <option value="60">В новостной статье</option>
+ <option value="70">В тематической статье</option>
+ <option value="40">На доске объявлений</option>
+ <option value="30">В каталоге сайтов</option>
+
+
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_design">60</span> руб.</td>
+ </tr>
+ 
+
+
+
+ <!-- TIC -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Тиц сайта - Яндекс</td>
+ <td width="250" style="vertical-align:middle;">выберите значение</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_index">
+ <option value="0">Тиц равен нулю</option>
+ <option value="20">Тиц равен 10</option>
+ <option value="30">Тиц равен 20</option>
+ <option value="40">Тиц от 30 до 50</option>
+ <option value="60">Тиц от 50 до 90</option>
+
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_index">0</span> руб.</td>
+ </tr>
+ 
+
+
+ <!-- Pagerank -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">PageRank - Google</td>
+ <td width="250" style="vertical-align:middle;">выберите значение</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_pgrank">
+ <option value="0">PageRank равен нулю</option>
+ <option value="10">PageRank равен 1</option>
+ <option value="20">PageRank равен 2</option>
+ <option value="40">PageRank Равен 3</option>
+
+
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_pgrank">0</span> руб.</td>
+ </tr>
+ 
+
+
+
+
+
+
+
+
+
+ <!-- 3hosting// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Написать статью для ссылки</td>
+ <td width="250" style="vertical-align:middle;">от 1500 до 200- символов</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="100" id="type_host" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_host">0</span> руб.</td>
+ </tr>
+ 
+
+<!--5content//--> 
+ 
+
+ 
+ <!-- 6SEO// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Дополнительные ссылки</td>
+ <td width="250" style="vertical-align:middle;">в faceBook, вКонтакте</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="10" id="seo" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_seo">0</span> руб.</td>
+ </tr>
+ 
+<!-- 7forum// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Посещаемость сайта</td>
+ <td width="250" style="vertical-align:middle;">посетителей в сутки</td>
+<td width="100" style="vertical-align:middle;"><select style="width:190px;" onchange="calc()" id="type_forum">
+ <option value="0">До 100 уников в сутки</option>
+ <option value="10">От 100 до 300 уников</option>
+ <option value="20">От 300 до 1000 уников</option>
+ <option value="40">Свыше 1000 уников</option>
+
+ </select>
+</td>
+<td width="200" style="vertical-align:middle;"><span id="result_forum">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 8comment// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Сайт в каталоге DMOZ</td>
+ <td width="250" style="vertical-align:middle;">каталог сайтов</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="30" id="comment" /></td>
+<td width="200 style="vertical-align:middle;""><span id="result_comment">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 9gallery// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Сайт в Яндекс-каталоге</td>
+ <td width="250" style="vertical-align:middle;">каталог сайтов</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="40" id="gallery" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_gallery">0</span> руб.</td>
+ </tr>
+ 
+
+ 
+<!-- 10eshop// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Сайт в Яндекс.Новостях</td>
+ <td width="250" style="vertical-align:middle;">трансляция новостей</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="30" id="eshop" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_eshop">0</span> руб.</td>
+ </tr>
+ 
+ <!-- 10eshop// -->
+ 
+ <tr>
+ <td width="150" style="vertical-align:middle;">Тематика сайта</td>
+ <td width="250" style="vertical-align:middle;">совпадает с анкором</td>
+<td width="100" style="vertical-align:middle;"><input type="checkbox" onchange="calc()" value="20" id="eshop_content" /></td>
+<td width="200" style="vertical-align:middle;"><span id="result_eshop_content">0</span> руб.</td>
+ </tr>
+ 
+
+
+<!-- Итог --> 
+ <tr>
+ <td width="250" class="td_result" style="vertical-align:middle;">ИТОГОВАЯ СТОИМОСТЬ:</td>
+ <td width="150" style="vertical-align:middle;"></td>
+<td width="100" style="vertical-align:middle;"></td>
+ <td class="td_result" style="vertical-align:middle;"><span id="result">140</span> руб.</td>
+ </tr>
+ </table>
